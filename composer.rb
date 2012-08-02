@@ -166,7 +166,7 @@ dev_webserver = multiple_choice "Web server for development?", [["WEBrick (defau
   ["Thin", "thin-development"], ["Unicorn", "unicorn-development"], ["Puma", "puma-development"]]
 recipes << dev_webserver
 prod_webserver = multiple_choice "Web server for production?", [["Same as development", "same"], 
-  ["Thin", "thin-production"], ["Unicorn", "unicorn-development"], ["Puma", "puma-production"]]
+  ["Thin", "thin-production"], ["Unicorn", "unicorn-production"], ["Puma", "puma-production"]]
 if dev_webserver == 'same'
   case prod_webserver
     when 'thin-development'
